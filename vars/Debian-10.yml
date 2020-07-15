@@ -22,4 +22,3 @@ default_wordpress_packages_apache:
   - php-mbstring
   - php-apcu
   - ssl-cert
-

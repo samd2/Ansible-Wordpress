@@ -43,3 +43,6 @@ default_wordpress_mysql_path: /etc/my.cnf.d
 default_wordpress_apache_service: httpd
 
 default_mysql_socket: /var/lib/mysql/mysql.sock
+default_make_dummy_cert_path: /etc/ssl/certs/make-dummy-cert
+
+default_wordpress_cert_group: apache

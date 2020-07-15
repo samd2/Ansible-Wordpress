@@ -14,3 +14,5 @@ default_wordpress_packages_apache:
   - php-mbstring
   - mod_ssl
   - openssl
+
+make_dummy_cert_path: /usr/bin/make-dummy-cert

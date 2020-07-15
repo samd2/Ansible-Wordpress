@@ -47,3 +47,5 @@ default_wordpress_exim_config_file: /etc/exim4/update-exim4.conf.conf
 default_wordpress_apache_service: apache2
 
 default_mysql_socket: /var/run/mysqld/mysqld.sock
+
+default_wordpress_cert_group: ssl-cert

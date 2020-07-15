@@ -7,6 +7,10 @@
     state: restarted
     enabled: true
 
+# - name: restart apache  # noqa 303
+#  become: true
+#  shell: systemctl restart apache && systemctl status httpd.service && journalctl -xe && ls -al /var/log/httpd
+
 - name: restart mysql
   service:
     name: "{{ wordpress_mysql_service }}"

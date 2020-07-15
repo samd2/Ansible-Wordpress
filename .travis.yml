@@ -43,7 +43,9 @@ script:
   - molecule --debug create
   - molecule --debug prepare
   - travis_wait 30 molecule --debug converge
-  - molecule --debug idempotence
+  - travis_wait 30 molecule --debug converge
+  - travis_wait 30 molecule --debug converge
+  # - molecule --debug idempotence
   # molecule side_effect does not exist
   # - molecule --debug side_effect
   - molecule --debug verify
