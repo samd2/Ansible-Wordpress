@@ -18,6 +18,10 @@
   pip:
     name: boto
 
+- name: install PyMySQL module
+  pip:
+    name: PyMySQL
+
 - name: ensure mysql is running and starts on boot
   service: name={{ wordpress_mysql_service }} state=started enabled=true
 
@@ -39,7 +43,10 @@
 
 # Need to do this for idempotency, see ansible docs for mysql_user
 - name: update mysql root password
-  mysql_user: name=root host=localhost password={{ wordpress_database_root_password }}
+  mysql_user:
+    name: root
+    login_unix_socket: "{{ mysql_socket }}"
+    password: "{{ wordpress_database_root_password }}"
 
 - name: create user .my.cnf file with root password credentials
   template:
